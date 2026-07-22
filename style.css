@@ -293,6 +293,36 @@ footer{
   font-size:0.8rem;
 }
 
+.nav-mobile{
+  display:none;
+  flex-direction:column;
+  background:var(--paper);
+  border-top:1px solid var(--line);
+  position:absolute;
+  top:100%; left:0; right:0;
+  padding:8px 32px 22px;
+  box-shadow:var(--shadow-md);
+}
+.nav-mobile.open{display:flex;}
+.nav-mobile a{
+  padding:15px 4px;
+  border-bottom:1px solid var(--line-soft);
+  color:var(--ink);
+  font-family:'IBM Plex Mono', monospace;
+  text-transform:uppercase;
+  font-size:0.85rem;
+  letter-spacing:0.05em;
+}
+.nav-mobile a:nth-last-child(2){border-bottom:none;}
+.nav-mobile .nav-cta-mobile{
+  margin-top:16px;
+  display:flex; align-items:center; gap:9px; justify-content:center;
+  background:var(--ink); color:var(--paper);
+  padding:13px 16px; border-radius:3px;
+  font-family:'IBM Plex Mono', monospace; font-size:0.9rem;
+  border-bottom:none !important;
+}
+
 @media(max-width:900px){
   .hero-inner{grid-template-columns:1fr;}
   .hero-art{order:-1; aspect-ratio:16/10;}
